@@ -1,17 +1,16 @@
-﻿import { MetricDefinitionV1 } from '../../data/version1';
-import { TimeHorizonV1 } from '../../data/version1';
-import { MetricUpdateV1 } from '../../data/version1';
-import { MetricValueSetV1 } from '../../data/version1';
-import { FilterParams } from 'pip-services3-commons-node';
+﻿import { FilterParams } from 'pip-services3-commons-node';
 import { PagingParams } from 'pip-services3-commons-node';
 import { DataPage } from 'pip-services3-commons-node';
 
+import { MetricDefinitionV1 } from '../../data/version1/MetricDefinitionV1';
+import { MetricUpdateV1 } from '../../data/version1/MetricUpdateV1';
+import { MetricValueSetV1 } from '../../data/version1/MetricValueSetV1';
+
 /// The client interface of Enterprise.Metrics service.</summary>
 export interface IMetricsClientV1 {
-
     /// Gets the metric definitions.
     /// <param name="correlationId">The correlation identifier.</param>
-    getMetricDefinitions(correlationId: string, callback: (err: any, items: Array<MetricDefinitionV1>) => void): void;
+    getMetricDefinitions(correlationId: string, callback: (err: any, items: MetricDefinitionV1[]) => void): void;
 
     /// <summary>Gets the metric definition by name .</summary>
     /// <param name="correlationId">The correlation identifier.</param>
@@ -28,11 +27,11 @@ export interface IMetricsClientV1 {
     /// <param name="correlationId">The correlation identifier.</param>
     /// <param name="update">The update.</param>
     /// <param name="maxTimeHorizon">The maximum time horizon.</param>
-    updateMetric(correlationId: string, update: MetricUpdateV1, maxTimeHorizon: TimeHorizonV1): void;
+    updateMetric(correlationId: string, update: MetricUpdateV1, maxTimeHorizon: number, callback: (err: any) => void): void;
 
     /// <summary>Updates the metrics asynchronous.</summary>
     /// <param name="correlationId">The correlation identifier.</param>
     /// <param name="updates">The updates.</param>
     /// <param name="maxTimeHorizon">The maximum time horizon.</param>
-    updateMetrics(correlationId: string, updates: MetricUpdateV1[], maxTimeHorizon: TimeHorizonV1): void;
+    updateMetrics(correlationId: string, updates: MetricUpdateV1[], maxTimeHorizon: number, callback: (err: any) => void): void;
 }

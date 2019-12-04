@@ -1,1 +1,1 @@
-export { MetricsServiceFactory } from './MetricsServiceFactory';
+export { MetricsClientFactory } from './MetricsClientFactory';
