@@ -6,7 +6,7 @@
 * [Development Guide](doc/Development.md)
 * [Client API version 1](doc/NodeClientApiV1.md)
 * Service
-  - [Metrics service](https://github.com/pip-services-infrastructure/pip-service-metrics-node)
+  - [Metrics service](https://github.com/pip-services-infrastructure/pip-services-metrics-node)
 
 This is a Node.js client SDK for [pip-services-metrics](https://github.com/pip-services-infrastructure/pip-services-metrics-node) microservice.
 
