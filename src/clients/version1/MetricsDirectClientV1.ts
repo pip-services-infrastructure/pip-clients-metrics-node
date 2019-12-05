@@ -4,7 +4,6 @@ import { PagingParams } from 'pip-services3-commons-node';
 import { DataPage } from 'pip-services3-commons-node';
 import { DirectClient } from 'pip-services3-rpc-node';
 
-//import { IMetricsController } from 'pip-services-metrics-node';
 import { IMetricsClientV1 } from './IMetricsClientV1';
 import { MetricDefinitionV1 } from '../../data/version1/MetricDefinitionV1';
 import { MetricUpdateV1 } from '../../data/version1/MetricUpdateV1';

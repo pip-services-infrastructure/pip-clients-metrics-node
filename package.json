@@ -52,7 +52,7 @@
         "@types/mongodb": "^2.1.38",
         "@types/node": "^12.12.6",
         "chai": "*",
-        "mocha": "*",
+        "mocha": "*", 
         "restify": "^4.3.0",
         "pip-services-metrics-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-services-metrics-node.git"
     }
