@@ -1,6 +1,6 @@
 {
     "name": "pip-clients-metrics-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Client SDK to metrics microservice in Node.js",
     "contributors": [
@@ -12,7 +12,7 @@
     "main": "./obj/src/index.js",
     "typings": "./obj/src/index.d.ts",
     "keywords": [
-        "cluster",
+        "metrics",
         "microservice"
     ],
     "noAnalyze": true,
@@ -51,6 +51,6 @@
         "chai": "*",
         "mocha": "*",
         "restify": "^4.3.0",
-        "pip-services-metrics-node": "^1.0.0"
+        "pip-services-metrics-node": "^1.0.1"
     }
 }
