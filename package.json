@@ -49,7 +49,7 @@
         "@types/mocha": "*",
         "@types/node": "^12.12.6",
         "chai": "*",
-        "mocha": "*",
+        "mocha": "^7.0.0",
         "restify": "^4.3.0",
         "pip-services-metrics-node": "^1.0.1"
     }
