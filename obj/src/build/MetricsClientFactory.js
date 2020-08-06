@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services3_components_node_1 = require("pip-services3-components-node");
 const pip_services3_commons_node_1 = require("pip-services3-commons-node");
-const MetricsNullClientV1_1 = require("../clients/version1/MetricsNullClientV1");
-const MetricsDirectClientV1_1 = require("../clients/version1/MetricsDirectClientV1");
-const MetricsHttpClientV1_1 = require("../clients/version1/MetricsHttpClientV1");
+const MetricsNullClientV1_1 = require("../version1/MetricsNullClientV1");
+const MetricsDirectClientV1_1 = require("../version1/MetricsDirectClientV1");
+const MetricsHttpClientV1_1 = require("../version1/MetricsHttpClientV1");
 class MetricsClientFactory extends pip_services3_components_node_1.Factory {
     constructor() {
         super();

@@ -2,9 +2,9 @@
 import { PagingParams } from 'pip-services3-commons-node';
 import { DataPage } from 'pip-services3-commons-node';
 
-import { MetricDefinitionV1 } from '../../data/version1/MetricDefinitionV1';
-import { MetricUpdateV1 } from '../../data/version1/MetricUpdateV1';
-import { MetricValueSetV1 } from '../../data/version1/MetricValueSetV1';
+import { MetricDefinitionV1 } from './MetricDefinitionV1';
+import { MetricUpdateV1 } from './MetricUpdateV1';
+import { MetricValueSetV1 } from './MetricValueSetV1';
 
 /// The client interface of pip-services3-metrics service
 export interface IMetricsClientV1 {

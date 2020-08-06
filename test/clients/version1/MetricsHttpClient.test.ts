@@ -6,7 +6,7 @@ import { MetricsMemoryPersistence } from 'pip-services-metrics-node';
 import { MetricsController } from 'pip-services-metrics-node';
 import { MetricsHttpServiceV1 } from 'pip-services-metrics-node';
 
-import { MetricsHttpClientV1 } from '../../../src/clients/version1/MetricsHttpClientV1';
+import { MetricsHttpClientV1 } from '../../../src/version1/MetricsHttpClientV1';
 import { MetricsClientV1Fixture } from './MetricsClientV1Fixture';
 
 suite('MetricsHttpClientV1', () => {
@@ -68,7 +68,7 @@ suite('MetricsHttpClientV1', () => {
         client.close(null, (err) => {
             service.close(null, (err) => {
                 persistence.close(null, done);
-            });    
+            });
         });
     });
 

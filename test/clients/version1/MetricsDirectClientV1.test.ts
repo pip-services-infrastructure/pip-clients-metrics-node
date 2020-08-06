@@ -6,7 +6,7 @@ import { References } from 'pip-services3-commons-node';
 import { MetricsMemoryPersistence } from 'pip-services-metrics-node';
 import { MetricsController } from 'pip-services-metrics-node';
 
-import { MetricsDirectClientV1 } from '../../../src/clients/version1/MetricsDirectClientV1';
+import { MetricsDirectClientV1 } from '../../../src/version1/MetricsDirectClientV1';
 import { MetricsClientV1Fixture } from './MetricsClientV1Fixture';
 
 suite('MetricsDirectClientV1', () => {

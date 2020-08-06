@@ -5,10 +5,10 @@ import { DataPage } from 'pip-services3-commons-node';
 import { DirectClient } from 'pip-services3-rpc-node';
 
 import { IMetricsClientV1 } from './IMetricsClientV1';
-import { MetricDefinitionV1 } from '../../data/version1/MetricDefinitionV1';
-import { MetricUpdateV1 } from '../../data/version1/MetricUpdateV1';
-import { TimeHorizonV1 } from '../../data/version1/TimeHorizonV1';
-import { MetricValueSetV1 } from '../../data/version1/MetricValueSetV1';
+import { MetricDefinitionV1 } from './MetricDefinitionV1';
+import { MetricUpdateV1 } from './MetricUpdateV1';
+import { TimeHorizonV1 } from './TimeHorizonV1';
+import { MetricValueSetV1 } from './MetricValueSetV1';
 
 export class MetricsDirectClientV1 extends DirectClient<any> implements IMetricsClientV1 {
     public constructor() {

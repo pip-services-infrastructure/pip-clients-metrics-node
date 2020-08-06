@@ -5,11 +5,11 @@ let assert = require('chai').assert;
 import { FilterParams } from 'pip-services3-commons-node';
 import { PagingParams } from 'pip-services3-commons-node';
 
-import { IMetricsClientV1 } from '../../../src/clients/version1/IMetricsClientV1'
-import { MetricUpdateV1 } from '../../../src/data/version1/MetricUpdateV1';
-import { TimeHorizonV1 } from '../../../src/data/version1/TimeHorizonV1';
-import { MetricValueSetV1 } from '../../../src/data/version1/MetricValueSetV1';
-import { MetricDefinitionV1 } from '../../../src/data/version1/MetricDefinitionV1';
+import { IMetricsClientV1 } from '../../../src/version1/IMetricsClientV1'
+import { MetricUpdateV1 } from '../../../src/version1/MetricUpdateV1';
+import { TimeHorizonV1 } from '../../../src/version1/TimeHorizonV1';
+import { MetricValueSetV1 } from '../../../src/version1/MetricValueSetV1';
+import { MetricDefinitionV1 } from '../../../src/version1/MetricDefinitionV1';
 
 export class MetricsClientV1Fixture {
     private _client: IMetricsClientV1;
@@ -25,7 +25,7 @@ export class MetricsClientV1Fixture {
             (callback) => {
                 this._client.updateMetric(
                     null,
-                    <MetricUpdateV1> {
+                    <MetricUpdateV1>{
                         name: "metric1",
                         dimension1: "A",
                         dimension2: "B",
@@ -45,7 +45,7 @@ export class MetricsClientV1Fixture {
                 this._client.updateMetrics(
                     null,
                     [
-                        <MetricUpdateV1> {
+                        <MetricUpdateV1>{
                             name: "metric1",
                             dimension1: "A",
                             dimension2: "B",
@@ -55,10 +55,10 @@ export class MetricsClientV1Fixture {
                             day: 26,
                             hour: 13,
                             value: 321
-                        }        
+                        }
                     ],
-                    TimeHorizonV1.Hour, 
-                    callback    
+                    TimeHorizonV1.Hour,
+                    callback
                 );
             },
             // Get total metric
@@ -77,7 +77,7 @@ export class MetricsClientV1Fixture {
                         assert.equal("A", set.dimension1);
                         assert.equal("B", set.dimension2);
                         assert.isNull(set.dimension3);
-                        assert.equal(1, set.values.length); 
+                        assert.equal(1, set.values.length);
 
                         let value = set.values[0];
                         assert.equal(444, value.sum);
@@ -150,7 +150,7 @@ export class MetricsClientV1Fixture {
                 this._client.updateMetrics(
                     null,
                     [
-                        <MetricUpdateV1> {
+                        <MetricUpdateV1>{
                             name: "metric2",
                             dimension1: "A",
                             dimension2: "B",
@@ -159,9 +159,9 @@ export class MetricsClientV1Fixture {
                             month: 8,
                             day: 26,
                             hour: 12,
-                            value: 123    
+                            value: 123
                         },
-                        <MetricUpdateV1> {
+                        <MetricUpdateV1>{
                             name: "metric2",
                             dimension1: "A",
                             dimension2: "C",
@@ -171,7 +171,7 @@ export class MetricsClientV1Fixture {
                             day: 26,
                             hour: 13,
                             value: 321
-                        }                
+                        }
                     ],
                     TimeHorizonV1.Hour,
                     callback
@@ -179,13 +179,13 @@ export class MetricsClientV1Fixture {
             },
             (callback) => {
                 // Get all definitions
-                 this._client.getMetricDefinitions(
-                     null,
-                     (err, definitions) => {
+                this._client.getMetricDefinitions(
+                    null,
+                    (err, definitions) => {
                         assert.equal(1, definitions.length);
                         let definition: MetricDefinitionV1 = definitions[0];
                         assert.equal("metric2", definition.name);
-                        assert.equal(1,definition.dimension1.length);
+                        assert.equal(1, definition.dimension1.length);
                         assert.equal("A", definition.dimension1[0]);
                         assert.equal(2, definition.dimension2.length);
                         assert.equal("B", definition.dimension2[0]);
@@ -197,10 +197,10 @@ export class MetricsClientV1Fixture {
             },
             (callback) => {
                 // Get a single definition
-                 this._client.getMetricDefinitionByName(null, "metric2", (err, definition)=>{
+                this._client.getMetricDefinitionByName(null, "metric2", (err, definition) => {
                     assert.equal("metric2", definition.name);
                     callback(err);
-                });                
+                });
             }
         ], done);
     }

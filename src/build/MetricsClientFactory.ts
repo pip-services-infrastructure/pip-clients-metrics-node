@@ -2,9 +2,9 @@
 import { Factory } from 'pip-services3-components-node';
 import { Descriptor } from 'pip-services3-commons-node';
 
-import { MetricsNullClientV1 } from '../clients/version1/MetricsNullClientV1';
-import { MetricsDirectClientV1 } from '../clients/version1/MetricsDirectClientV1';
-import { MetricsHttpClientV1 } from '../clients/version1/MetricsHttpClientV1';
+import { MetricsNullClientV1 } from '../version1/MetricsNullClientV1';
+import { MetricsDirectClientV1 } from '../version1/MetricsDirectClientV1';
+import { MetricsHttpClientV1 } from '../version1/MetricsHttpClientV1';
 
 export class MetricsClientFactory extends Factory {
     public Descriptor: Descriptor = new Descriptor("pip-services-metrics", "factory", "client", "default", "1.0");
